@@ -13,6 +13,7 @@ const options: ConnectionOptions = {
   type: 'sqlite',
   database: process.env.SQLITE_PATH,
   entities: [User, ActiveSession],
+  synchronize: true,
   logging: true,
 };
 

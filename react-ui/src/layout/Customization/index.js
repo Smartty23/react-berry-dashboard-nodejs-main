@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // material-ui
-import { useTheme } from '@mui/styles';
+import { useTheme } from '@mui/material/styles';
 import {
     Drawer,
     Fab,
@@ -107,7 +107,7 @@ const Customization = () => {
                         position: 'fixed',
                         right: 20,
                         zIndex: (theme) => theme.zIndex.speedDial,
-                        boxShadow: theme.shadows[8]
+                        boxShadow: theme?.shadows?.[8] || '0px 4px 20px rgba(0, 0, 0, 0.1)'
                     }}
                 >
                     <AnimateButton type="rotate">

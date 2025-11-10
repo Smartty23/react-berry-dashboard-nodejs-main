@@ -139,7 +139,7 @@ const RestRegister = ({ ...others }) => {
                             })
                             .catch(function (error) {
                                 setStatus({ success: false });
-                                setErrors({ submit: error.response.data.msg });
+                                setErrors({ submit: error.response?.data?.msg || error.message || 'Registration failed' });
                                 setSubmitting(false);
                             });
                     } catch (err) {

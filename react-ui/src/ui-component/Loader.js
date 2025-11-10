@@ -1,32 +1,27 @@
 import React from 'react';
 
 // material-ui
-import { makeStyles } from '@mui/styles';
+import { Box } from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
-
-// style constant
-const useStyles = makeStyles((theme) => ({
-    root: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        zIndex: 1301,
-        width: '100%',
-        '& > * + *': {
-            marginTop: theme.spacing(2)
-        }
-    }
-}));
 
 //-----------------------|| Loader ||-----------------------//
 
 const Loader = () => {
-    const classes = useStyles();
-
     return (
-        <div className={classes.root}>
+        <Box
+            sx={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                zIndex: 1301,
+                width: '100%',
+                '& > * + *': {
+                    marginTop: 2
+                }
+            }}
+        >
             <LinearProgress color="primary" />
-        </div>
+        </Box>
     );
 };
 

@@ -130,7 +130,7 @@ const RestLogin = (props, { ...others }) => {
                             })
                             .catch(function (error) {
                                 setStatus({ success: false });
-                                setErrors({ submit: error.response.data.msg });
+                                setErrors({ submit: error.response?.data?.msg || error.message || 'Login failed' });
                                 setSubmitting(false);
                             });
                     } catch (err) {
