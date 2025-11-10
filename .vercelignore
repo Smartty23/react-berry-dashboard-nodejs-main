@@ -1,0 +1,8 @@
+node_modules
+.git
+*.log
+.env.local
+.DS_Store
+react-ui/node_modules
+api-server-nodejs/node_modules
+database.db
